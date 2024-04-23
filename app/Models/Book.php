@@ -9,6 +9,7 @@ class Book extends Model
 {
     use HasFactory;
 
+    // Model relations
     public function book()
     {
         return $this->belongsTo(User::class, 'user_id');
