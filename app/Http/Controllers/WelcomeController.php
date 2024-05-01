@@ -7,7 +7,7 @@ use App\Models\Book;
 
 class WelcomeController extends Controller
 {
-    public function welcome()
+    public function __invoke()
     {
         $books = Book::take(6)->get();
 
