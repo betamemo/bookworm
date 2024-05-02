@@ -1,4 +1,4 @@
-<x-site-layout title="Start writing an article">
+<x-site-layout title="Start writing an book">
 
     @if($errors->any())
     <div class="bg-red-50 rounded p-2 text-red-500">
@@ -6,7 +6,7 @@
     </div>
     @endif
 
-    <form action="{{route('user.articles.store')}}" method="post" class="flex flex-col gap-4">
+    <form action="{{route('user.books.store')}}" method="post" class="flex flex-col gap-4">
         @csrf
 
         <x-form-text label="Title" name="title" />
