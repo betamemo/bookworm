@@ -27,4 +27,4 @@ This web application is designed to assist you keep track of your books by funct
 
 ## Attributions
 - <a href="https://www.freepik.com/icon/worm_742389">Icon by Freepik</a>
-- <a href="https://www.freepik.com/icon/star_3794112">Icon by Wahyu Adam</a>
+- <a href="https://www.freepik.com/icon/rating_6948698">Icon by Ian June</a>
