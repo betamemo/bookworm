@@ -17,9 +17,13 @@ This web application is designed to assist you keep track of your books by funct
 - Install composer: `composer install`
 - Copy a config to .env file: `cp .env.example .env`
 - Set a key in .env file: `php artisan key:generate`
-- Edit .env file to localhost: DB_DATABASE, DB_USERNAME, DB_PASSWORD
+- Edit .env file to localhost:
+  - APP_URL=`http://bookworm.test`
+  - DB_DATABASE=`bookworm`
+  - DB_USERNAME=`<your username>`
+  - DB_PASSWORD=`<your password>`
 - Migrate the database: `php artisan migrate` 
-- Seed the data: `php artisan db:seed`
+- Seed the data: `php artisan migrate:fresh --seed`
 
 ## Attributions
 - <a href="https://www.freepik.com/icon/worm_742389#fromView=search&page=1&position=40&uuid=37d70866-a784-4155-b66c-c33d3128921d">Icon by Freepik</a>
