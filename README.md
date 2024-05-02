@@ -23,7 +23,7 @@ This web application is designed to assist you keep track of your books by funct
   - DB_USERNAME=`<your username>`
   - DB_PASSWORD=`<your password>`
 - Migrate the database: `php artisan migrate` 
-- Seed the data: `php artisan db:seed`
+- Seed the data: `php artisan migrate:fresh --seed`
 
 ## Attributions
 - <a href="https://www.freepik.com/icon/worm_742389#fromView=search&page=1&position=40&uuid=37d70866-a784-4155-b66c-c33d3128921d">Icon by Freepik</a>
