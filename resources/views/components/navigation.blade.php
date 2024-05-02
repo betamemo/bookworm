@@ -28,17 +28,17 @@
                         @auth
                         <span class="px-3 py-2 text-sm font-medium">Hello! {{ auth()->user()->name }}</span>
 
-                        <a href="{{ route('dashboard') }}" class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+                        <a href="{{route('dashboard')}}" class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
 
-                        <form action="{{ route('logout') }}" method="post">
+                        <form action="{{route('logout')}}" method="post">
                             @csrf
                             <button class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">Logout</button>
                         </form>
                         @endauth
 
                         @guest
-                        <a href="{{ route('login') }}" class="text-white-300 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</a>
-                        <a href="{{ route('register') }}" class="text-white-300 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
+                        <a href="{{route('login')}}" class="text-white-300 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</a>
+                        <a href="{{route('register')}}" class="text-white-300 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
                         @endguest
 
                     </div>
