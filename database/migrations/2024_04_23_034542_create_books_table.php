@@ -16,10 +16,9 @@ return new class extends Migration
 
             $table->string('title');
             $table->string('author');
-            $table->string('language');
-            $table->string('publisher');
-            $table->date('publication_date');
-            $table->text('content');
+            $table->string('publisher')->nullable();
+            $table->string('isbn')->nullable();
+            $table->text('content')->nullable();
 
             $table->timestamps();
         });
