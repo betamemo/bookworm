@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'name' => 'Bandita K',
-            'email' => 'bandita.kul@gmail.com',
+            'email' => 'beta@memo.com',
             'superadmin' => true,
-            'password' => '$2y$12$bsncgdaWH2WNDcStnh5aF.SkUBSm3r.VurymzwDKc9MzU462pkjY2',
+            'password' => '$2y$12$bCueu1NNhB6S3YkUslUQy.4LUYBxNlieXD696R2dG/XT8LmuO51Y2',
         ]);
 
         User::factory(10)->create();
