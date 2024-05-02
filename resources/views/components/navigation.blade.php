@@ -4,7 +4,7 @@
             <div class="flex items-center">
 
                 <!-- Logo -->
-                <div class="flex-shrink-0 w-10 h-10 text-teal-400">
+                <div class="flex-shrink-0 w-12 h-12">
                     <x-application-logo />
                 </div>
 
@@ -28,7 +28,7 @@
                         @auth
                         <span class="px-3 py-2 text-sm font-medium">Hello! {{ auth()->user()->name }}</span>
 
-                        <a href="{{route('dashboard')}}" class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+                        <a href="{{route('dashboard')}}" class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">My Books</a>
 
                         <form action="{{route('logout')}}" method="post">
                             @csrf
