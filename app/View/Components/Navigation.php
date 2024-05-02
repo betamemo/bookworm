@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class Navigation extends Component
 {
     public $menu = [];
-    
+
     /**
      * Create a new component instance.
      */
@@ -19,6 +19,7 @@ class Navigation extends Component
             ['name' => 'Home', 'url' => '/'],
             ['name' => 'Books', 'url' => '/books'],
             ['name' => 'Categories', 'url' => '/categories'],
+            ['name' => 'Authors', 'url' => '/authors'],
             ['name' => 'Contact', 'url' => '/contact'],
         ];
     }
