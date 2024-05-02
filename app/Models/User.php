@@ -45,7 +45,7 @@ class User extends Authenticatable
         ];
     }
 
-    // Model relations
+    // Model relations -------------------------------------------
     public function books()
     {
         return $this->hasMany(Book::class);
