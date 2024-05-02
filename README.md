@@ -12,7 +12,7 @@ This web application is designed to assist you keep track of your books by funct
 ## Environment Variables
 -
 
-## Installation instructions 
+## Installation Instructions 
 - Clone this project: `git clone`
 - Install composer: `composer install`
 - Copy a config to .env file: `cp .env.example .env`
@@ -26,4 +26,5 @@ This web application is designed to assist you keep track of your books by funct
 - Seed the data: `php artisan migrate:fresh --seed`
 
 ## Attributions
-- <a href="https://www.freepik.com/icon/worm_742389#fromView=search&page=1&position=40&uuid=37d70866-a784-4155-b66c-c33d3128921d">Icon by Freepik</a>
+- <a href="https://www.freepik.com/icon/worm_742389">Icon by Freepik</a>
+- <a href="https://www.freepik.com/icon/star_3794112">Icon by Wahyu Adam</a>
