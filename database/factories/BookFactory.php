@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,12 +18,43 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence(),
-            'description' => fake()->paragraph(),
+            'title' => fake()->sentence,
             'author' => fake()->name(),
             'language' => fake()->numberBetween(1, 10),
             'publisher' => fake()->numberBetween(1, 10),
             'publication_date' => fake()->date(),
+            'content' => $this->generateTextInParagraphs(random_int(1, 5)),
+            'created_at' => fake()->dateTimeThisYear,
         ];
+    }
+
+    private function generateTextInParagraphs(int $numberOfParagrpahs): string
+    {
+        $text = '';
+
+        for ($i = 0; $i < $numberOfParagrpahs; $i++) {
+            $text .= fake()->realText(random_int(200, 1000)) . "\n\n";
+        }
+
+        return $text;
+    }
+
+    public function configure()
+    {
+        return $this->afterCreating(function (Book $book) {
+            return $book;
+        });
+    }
+
+    // Solution from https://laracasts.com/discuss/channels/testing/how-to-disable-factory-callbacks
+    public function withImages(): self
+    {
+        //Alternative source: https://loremflickr.com/640/480';
+        return $this->afterCreating(function (Book $book) {
+            $url = 'https://source.unsplash.com/random/800x600/?book';
+            $book
+                ->addMediaFromUrl($url)
+                ->toMediaCollection();
+        });
     }
 }
