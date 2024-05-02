@@ -3,14 +3,14 @@
 
     <div class="absolute flex flex-row gap-2 absolute top-4 right-4 text-xs">
         @foreach($book->categories as $category)
-        <span class="bg-purple-100 text-purple-500 px-2 rounded-full">{{ $category->name }}</span>
+        <span class="bg-green-100 text-green-500 px-2 rounded-full">{{ $category->name }}</span>
         @endforeach
     </div>
 
     <h3 class="font-bold text-xl">{{$book->title}}</h3>
     <div>
-        <span class="text-teal-400 font-bold">&gt</span>
-        $book->author->name
+        <span class="text-green-500 font-bold">&gt</span>
+        {{$book->author}}
     </div>
     <p class="line-clamp-3">{{ Str::limit($book->content,300)}}</p>
 </a>
