@@ -32,7 +32,7 @@ class BookFactory extends Factory
         $text = '';
 
         for ($i = 0; $i < $numberOfParagrpahs; $i++) {
-            $text .= fake()->realText(random_int(200, 1000)) . "\n\n";
+            $text .= fake()->realText(random_int(200, 800)) . "\n\n";
         }
 
         return $text;
