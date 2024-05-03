@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Login" hideTitle>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
