@@ -15,6 +15,7 @@ Route::get('/books/{id}', [\App\Http\Controllers\BookController::class, 'show'])
 Route::get('/search', [\App\Http\Controllers\SearchController::class, 'create'])->name('search.create');
 Route::post('/search', [\App\Http\Controllers\SearchController::class, 'store'])->name('search.store');
 
+
 // User routes
 require __DIR__ . '/auth.php';
 
@@ -22,6 +23,8 @@ Route::redirect('/dashboard', 'user/books')->middleware(['auth', 'verified'])->n
 
 Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
     Route::resource('books', \App\Http\Controllers\User\BookController::class);
+    Route::resource('status', \App\Http\Controllers\User\StatusController::class);
+    Route::resource('reviews', \App\Http\Controllers\User\ReviewController::class);
     Route::resource('categories', \App\Http\Controllers\User\CategoryController::class)
         ->middleware(\App\Http\Middleware\IsAdminMiddleware::class);
 });
