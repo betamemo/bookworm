@@ -25,7 +25,7 @@
                     <div class="flex flex-row justify-center gap-4">
 
                         @auth
-                        <span class="px-3 py-2 font-medium">Hello! {{auth()->user()->name}}</span>
+                        <span class="px-3 py-2 font-medium">Hello! {{ auth()->user()->name }}</span>
 
                         <a href="{{route('dashboard')}}" class="text-green-500 rounded-full px-3 py-2 font-medium hover:bg-green-500 hover:text-white">My Books</a>
 
