@@ -1,7 +1,7 @@
 <x-site-layout title="Books">
 
-    <div class="mb-2">
-        {{$books->links()}}
+    <div class="mb-4">
+        {{ $books->links() }}
     </div>
 
     <div class="grid grid-cols-4 gap-8">
