@@ -19,10 +19,9 @@ class BookFactory extends Factory
     {
         return [
             'title' => fake()->sentence,
-            'author' => fake()->name(),
-            'language' => fake()->numberBetween(1, 10),
-            'publisher' => fake()->numberBetween(1, 10),
-            'publication_date' => fake()->date(),
+            'author' => fake()->name,
+            'publisher' => fake()->word,
+            'isbn' => fake()->word,
             'content' => $this->generateTextInParagraphs(random_int(1, 5)),
             'created_at' => fake()->dateTimeThisYear,
         ];
