@@ -12,7 +12,7 @@
     @endif
 
     <div>
-        Written by: {{$book->author->name}}
+        Author: {{$book->author}}
     </div>
 
     <div class="bg-white">

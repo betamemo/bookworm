@@ -1,9 +1,7 @@
-<x-site-layout title="Books of the day">
+<x-site-layout title="Meet your next favorite books">
 
-    <div class="grid grid-cols-4 gap-4 mt-4">
-        @foreach($books as $book)
-        <x-book-display-card :book="$book" />
-        @endforeach
+    <div class="flex justify-center">
+        <img src="/img/open-book.png" />
     </div>
 
 </x-site-layout>

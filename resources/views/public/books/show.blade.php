@@ -1,7 +1,7 @@
 <x-site-layout title="{{$book->title}}" hideTitle>
 
     <div class="flex justify-left w-full mb-4 gap-4">
-        <a href="{{route('books.index')}}" class="p-1 text-green-500 hover:bg-green-100 rounded">&lt Back</a>
+        <a href="{{route('books.index')}}" class="p-2 text-green-500 hover:bg-white hover:text-green-500 rounded">&lt Back</a>
     </div>
 
     <div class="flex flex-col md:flex-row gap-x-12">
@@ -11,12 +11,16 @@
                 <img src="{{$book->getFeaturedImageUrl()}}" class="rounded">
             </div>
 
-            <div class="block relative mb-8 ">
-                <a class="p-2 border text-green-500 border-green-500 bg-green-500 text-white rounded-full hover:bg-green-600">Add to your books</a>
+            <div class="flex justify-center mb-6">
+                <a href="{{route('user.status.create')}}" class="p-2 border text-green-500 border-green-500 bg-green-500 text-white rounded hover:bg-green-600">
+                    Add to your books
+                </a>
             </div>
 
-            <div class="block relative mb-4">
-                <a class="p-2 border text-green-500 border-green-500 bg-green-500 text-white rounded-full hover:bg-green-600">Review this book</a>
+            <div class="flex justify-center mb-6">
+                <a href="{{route('user.reviews.create')}}" class="p-2 border text-green-500 border-green-500 bg-green-500 text-white rounded hover:bg-green-600">
+                    Review this book
+                </a>
             </div>
         </div>
 
@@ -43,6 +47,11 @@
 
             <div class="my-2">
                 <span class="text-green-500 font-bold">&gt</span>
+                ISBN: <span class="font-semibold">{{$book->isbn}}</span>
+            </div>
+
+            <div class="my-2">
+                <span class="text-green-500 font-bold">&gt</span>
                 Publisher: <span class="font-semibold">{{$book->publisher}}</span>
             </div>
 
@@ -62,14 +71,34 @@
         </div>
     </div>
     <div class="flex flex-col md:flex-row gap-x-12">
-        <div class="w-1/3">
-            <h2 class="text-xl font-bold">Reviews</h2>
+        <div class="w-1/3"></div>
+
+        <!-- Reviews -->
+        <div class="w-2/3">
+            <h2 class="text-xl font-bold mb-4 mt-4">Reviews</h2>
+
+            <ul>
+                @foreach($reviews as $review)
+                <li>
+                    <div class="bg-white rounded p-4 mb-4">
+                        {{$review->comment}}
+                        <div class="p-1 mb-1 flex flex-row justify-between ">
+                            <div class="flex">
+                                <img src="/img/user.png" />
+                                <span class="justify-left ml-2">{{$review->user_id}}</span>
+                            </div>
+                            <div class="flex">
+                                <span class="justify-right text-sm">{{$review->created_at}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
         </div>
 
-        <!-- Related books -->
-        <div class="w-1/3">
+        <!-- <div class="w-1/3">
             <h2 class="text-xl font-bold">Related books</h2>
-
             <ul>
                 @foreach($related as $r)
                 <li class="block relative mb-4">
@@ -85,10 +114,7 @@
                 </li>
                 @endforeach
             </ul>
-        </div>
-        <!-- End Related books -->
+        </div> -->
+
     </div>
-
-
-
 </x-site-layout>
