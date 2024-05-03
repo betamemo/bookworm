@@ -1,4 +1,4 @@
-<nav class="bg-green-500" x-data="{ open: false }">
+<nav class="bg-white" x-data="{ open: false }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
@@ -14,31 +14,30 @@
                         <!-- Current: "bg-white-900 text-white", Default: "text-white-300 hover:bg-green-500 hover:text-white" -->
 
                         @foreach($menu as $item)
-                        <a href="{{$item['url']}}" class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">{{$item['name']}}</a>
+                        <a href="{{ $item['url'] }}" class="text-green-500 rounded-full px-3 py-2 font-medium hover:bg-green-500 hover:text-white">{{ $item['name'] }}</a>
                         @endforeach
-
                     </div>
                 </div>
             </div>
 
             <div class="hidden md:block">
                 <div class="ml-4 flex items-center md:ml-6">
-                    <div class="text-white flex flex-row justify-center gap-4">
+                    <div class="flex flex-row justify-center gap-4">
 
                         @auth
-                        <span class="px-3 py-2 text-sm font-medium">Hello! {{ auth()->user()->name }}</span>
+                        <span class="px-3 py-2 font-medium">Hello! {{auth()->user()->name}}</span>
 
-                        <a href="{{route('dashboard')}}" class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">My Books</a>
+                        <a href="{{route('dashboard')}}" class="text-green-500 rounded-full px-3 py-2 font-medium hover:bg-green-500 hover:text-white">My Books</a>
 
                         <form action="{{route('logout')}}" method="post">
                             @csrf
-                            <button class="text-white hover:bg-white hover:text-green-500 rounded-md px-3 py-2 text-sm font-medium">Logout</button>
+                            <button class="text-green-500 rounded-full px-3 py-2 font-medium hover:bg-green-500 hover:text-white">Logout</button>
                         </form>
                         @endauth
 
                         @guest
-                        <a href="{{route('login')}}" class="text-white-300 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</a>
-                        <a href="{{route('register')}}" class="text-white-300 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
+                        <a href="{{route('login')}}" class="text-green-500 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</a>
+                        <a href="{{route('register')}}" class="text-green-500 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
                         @endguest
 
                     </div>
