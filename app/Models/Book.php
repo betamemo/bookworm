@@ -27,6 +27,16 @@ class Book extends Model implements HasMedia
         return $this->belongsToMany(Category::class);
     }
 
+    public function status()
+    {
+        return $this->belongsTo(Status::class, 'status_id');
+    }
+
+    public function reviews()
+    {
+        return $this->belongsToMany(Review::class, 'book_id');
+    }
+
     // Business logic for model -----------------------------------
     public function isAllowedToEdit(User $user): bool
     {
