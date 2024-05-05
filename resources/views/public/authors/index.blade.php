@@ -1,14 +1,14 @@
 <x-site-layout title="Genres">
 
     <div class="mb-4">
-        {{ $genres->links() }}
+        {{ $authors->links() }}
     </div>
 
-    @foreach($genres as $genre)
-    <h1 class="text-xl font-bold">{{ $genre->name }}</h1>
+    @foreach($authors as $author)
+    <h1 class="text-xl font-bold">{{ $author->name }}</h1>
     <br />
     <div class="grid grid-cols-6 gap-6">
-        @foreach($genre->books as $book)
+        @foreach($author->books as $book)
         <x-book-display-card :book="$book" />
         @endforeach
     </div>
