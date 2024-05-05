@@ -1,4 +1,4 @@
-<x-site-layout title="Genres">
+<x-site-layout title="Authors">
 
     <div class="mb-4">
         {{ $authors->links() }}

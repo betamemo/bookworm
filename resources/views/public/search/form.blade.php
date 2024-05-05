@@ -1,4 +1,4 @@
-<x-site-layout title="Search and browse books">
+<x-site-layout title="Search books">
 
     <x-form-search />
 

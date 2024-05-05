@@ -39,7 +39,7 @@
 
                     <div class="flex justify-between text-xs mt-4">
                         <div>
-                            <span class="text-gray-500 mr-1">Craeted by:</span>
+                            <span class="text-gray-500 mr-1">Created by:</span>
                             <span class="font-bold">{{ $review->user->name }}</span>
                         </div>
                         <div class="text-gray-500">
