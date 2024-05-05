@@ -18,12 +18,10 @@ Route::post('/search', [\App\Http\Controllers\SearchController::class, 'store'])
 // User routes
 require __DIR__ . '/auth.php';
 
-Route::redirect('/dashboard', 'user/books')->middleware(['auth', 'verified'])->name('dashboard');
+Route::redirect('/dashboard', 'user/collection')->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
-    Route::resource('books', \App\Http\Controllers\User\BookController::class);
-    Route::resource('status', \App\Http\Controllers\User\StatusController::class);
-    Route::resource('reviews', \App\Http\Controllers\User\ReviewController::class);
+    Route::resource('collection', \App\Http\Controllers\User\CollectionController::class);
 });
 
 Route::middleware('auth')->group(function () {
