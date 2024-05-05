@@ -40,6 +40,6 @@ class DatabaseSeeder extends Seeder
 
         Review::factory(20)->create();
 
-        Collection::factory(20)->create();
+        Collection::factory(50)->create();
     }
 }
