@@ -9,8 +9,10 @@ This web application is designed to assist you keep track of your books by funct
 ## Requirements
 - [Laravel 11](https://laravel.com/docs/11.x/releases)
 
-## Environment Variables
--
+## Required Environment
+- php: ^8.2
+- laravel/framework: ^11.0
+- laravel/tinker: ^2.9
 
 ## Installation Instructions 
 - Clone this project: `git clone`
