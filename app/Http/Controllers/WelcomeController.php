@@ -8,7 +8,9 @@ class WelcomeController extends Controller
 {
     public function __invoke()
     {
-        $books = Book::with('author', 'categories', 'media')->latest('created_at')->take(8)->get();
+        // $books = Book::with('media')->latest('created_at')->take(5)->get();
+        
+        $books = Book::get();
 
         return view('public.welcome', ['books' => $books]);
     }
