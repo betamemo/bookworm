@@ -12,7 +12,7 @@ class GenreController extends Controller
     {
         $genres = Genre::with('books')
         ->orderBy('name')
-        ->get();
+        ->paginate(5);
 
         return view('public.genres.index', ['genres' => $genres]);
     }
