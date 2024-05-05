@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Author;
 use App\Models\Book;
 use App\Models\Collection;
 use App\Models\Genre;
@@ -35,8 +36,10 @@ class DatabaseSeeder extends Seeder
         Status::create(['name' => 'Finished']);
 
         Genre::factory(20)->create();
+        
+        Author::factory(20)->create();
 
-        $books = Book::factory(20)->withImages()->create();
+        $books = Book::factory(60)->withImages()->create();
 
         Review::factory(20)->create();
 
