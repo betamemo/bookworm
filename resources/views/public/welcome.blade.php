@@ -6,6 +6,7 @@
         "Each day means a new twenty-four hours. Each day means everything's possible again."
         ― <span class="font-bold">Legend by Marie Lu</span></p>
     <br />
+    <hr />
     <br />
     <h1 class="font-bold text-2xl">New Book Releases</h1>
     <br />
