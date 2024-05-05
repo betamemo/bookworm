@@ -1,12 +1,10 @@
-<x-site-layout title="Meet your next favorite books">
+<x-site-layout title="Where Bookworms Find Their Next Escape">
 
     <h1 class="font-bold text-2xl">Quotes</h1>
     <br />
-    <p class="text-red-500 bg-white p-4 rounded-xl">
-        "Don't walk in front of me… I may not follow<br />
-        Don't walk behind me… I may not lead<br />
-        Walk beside me… just be my friend"<br />
-        ― <span class="font-bold">Albert Camus</span></p>
+    <p class="bg-white p-4 rounded-xl">
+        "Each day means a new twenty-four hours. Each day means everything's possible again."
+        ― <span class="font-bold">Legend by Marie Lu</span></p>
     <br />
     <br />
     <h1 class="font-bold text-2xl">New Book Releases</h1>
