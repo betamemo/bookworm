@@ -14,27 +14,26 @@ class Book extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
 
-    protected $fillable = ['title', 'content', 'user_id'];
-
-    // Model relations -------------------------------------------
-    public function author()
+    // Model relationships
+    public function genre()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Genre::class, 'genre_id');
     }
 
-    public function categories()
+    // ---------------------------------------------------
+    public function users()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(User::class, 'user_id');
     }
 
     public function status()
     {
-        return $this->belongsTo(Status::class, 'status_id');
+        return $this->hasOne(Status::class, 'statuts_id');
     }
 
     public function reviews()
     {
-        return $this->belongsToMany(Review::class, 'book_id');
+        return $this->hasMany(Review::class, 'book_id');
     }
 
     // Business logic for model -----------------------------------
@@ -51,7 +50,7 @@ class Book extends Model implements HasMedia
     public function getCardImageUrl()
     {
         if ($this->media->first() === null) {
-            return '/img/default-book-image.jpg';
+            return '/img/default-book.jpg';
         }
 
         return $this->media->first()?->getUrl('card');
@@ -60,7 +59,7 @@ class Book extends Model implements HasMedia
     public function getFeaturedImageUrl()
     {
         if ($this->media->first() === null) {
-            return '/img/default-book-image.jpg';
+            return '/img/default-book.jpg';
         }
 
         return $this->media->first()?->getUrl('features');
@@ -71,15 +70,15 @@ class Book extends Model implements HasMedia
     {
         $this
             ->addMediaConversion('preview')
-            ->fit(Fit::Contain, 50, 50)
+            ->fit(Fit::Contain, 100, 150)
             ->nonQueued();
         $this
             ->addMediaConversion('card')
-            ->fit(FIT::Crop, 400, 100)
+            ->fit(FIT::Crop, 200, 250)
             ->nonQueued();
         $this
             ->addMediaConversion('features')
-            ->fit(FIT::Crop, 400, 300)
+            ->fit(FIT::Crop, 300, 350)
             ->nonQueued();
     }
 }
