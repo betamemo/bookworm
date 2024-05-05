@@ -4,7 +4,7 @@
         {{ $books->links() }}
     </div>
 
-    <div class="grid grid-cols-4 gap-8">
+    <div class="grid grid-cols-6 gap-6">
         @foreach($books as $book)
         <x-book-display-card :book="$book" />
         @endforeach

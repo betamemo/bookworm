@@ -36,8 +36,8 @@
                         @endauth
 
                         @guest
-                        <a href="{{route('login')}}" class="text-green-500 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</a>
-                        <a href="{{route('register')}}" class="text-green-500 hover:bg-green-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
+                        <a href="{{ route('login') }}" class="text-green-500 hover:bg-green-500 hover:text-white rounded-full px-3 py-2 font-medium">Login</a>
+                        <a href="{{ route('register') }}" class="text-green-500 hover:bg-green-500 hover:text-white rounded-full px-3 py-2 font-medium">Register</a>
                         @endguest
 
                     </div>
@@ -47,7 +47,7 @@
             <div class="-mr-2 flex md:hidden">
 
                 <!-- Mobile menu button -->
-                <button @click="open = !open" type="button" class="relative inline-flex items-center justify-center rounded-md bg-white-800 p-2 text-white-400 hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-white-800" aria-controls="mobile-menu" aria-expanded="false">
+                <button @click="open = !open" type="button" class="relative inline-flex items-center justify-center rounded-full bg-white-800 p-2 text-white-400 hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-white-800" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="absolute -inset-0.5"></span>
                     <span class="sr-only">Open main menu</span>
 
