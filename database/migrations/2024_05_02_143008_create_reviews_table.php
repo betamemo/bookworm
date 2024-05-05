@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->foreignId('user_id');
             $table->foreignId('book_id');
-            $table->integer('stars');
+            $table->integer('star');
             $table->text('comment');
 
             $table->timestamps();
