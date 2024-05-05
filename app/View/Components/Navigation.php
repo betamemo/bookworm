@@ -16,6 +16,7 @@ class Navigation extends Component
             ['name' => 'Home', 'url' => '/'],
             ['name' => 'Books', 'url' => '/books'],
             ['name' => 'Authors', 'url' => '/authors'],
+            ['name' => 'Genres', 'url' => '/genres'],
             ['name' => 'Search', 'url' => '/search'],
         ];
     }
