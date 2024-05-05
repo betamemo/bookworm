@@ -4,7 +4,7 @@
 This web application is designed to assist you keep track of your books by functioning as your personal librarian. There are functions that lets you to create book lists, add tags to each book, and keep track of your reading progress. You can also view and write reviews for the books you've read. Whether you are a book lover who wants to organize your book collection, this web application will make your life easier.
 
 ## Developer
-- Bandita K ([@betamemo](https://www.github.com/betamemo))
+- Bandita ([@betamemo](https://www.github.com/betamemo))
 
 ## Model and Data Structure
 - [Figma](https://www.figma.com/file/kWCWTYyb0J34N38lSrkXcQ/Bookworm)
