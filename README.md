@@ -31,6 +31,7 @@ This web application is designed to assist you keep track of your books by funct
 - Seed the data: `php artisan migrate:fresh --seed`
 
 ## Attributions
-- <a href="https://www.freepik.com/icon/worm_742389">Icon by Freepik</a>
-- <a href="https://www.freepik.com/icon/rating_6948698">Icon by Ian June</a>
+- Worm <a href="https://www.freepik.com/icon/worm_742389">Icon by Freepik</a>
+- Star <a href="https://www.freepik.com/icon/rating_6948698">Icon by Ian June</a>
+- Random photos on [Unsplash](https://unsplash.com/)
 - Photo by <a href="https://unsplash.com/@gulfergin_01?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gülfer ERGİN</a> on <a href="https://unsplash.com/photos/white-and-brown-book-on-brown-woven-surface-LUGuCtvlk1Q?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
