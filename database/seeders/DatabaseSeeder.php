@@ -41,8 +41,8 @@ class DatabaseSeeder extends Seeder
 
         $books = Book::factory(60)->withImages()->create();
 
-        Review::factory(20)->create();
+        Review::factory(60)->create();
 
-        Collection::factory(50)->create();
+        Collection::factory(60)->create();
     }
 }
