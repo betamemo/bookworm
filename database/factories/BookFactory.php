@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Book;
+use App\Models\Genre;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,11 +19,13 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence,
+            'name' => fake()->sentence,
             'author' => fake()->name,
             'publisher' => fake()->word,
-            'isbn' => fake()->word,
+            'isbn' => fake()->unique()->isbn13(),
             'content' => $this->generateTextInParagraphs(random_int(1, 5)),
+            'genre_id' => Genre::all()->random()->id,
+
             'created_at' => fake()->dateTimeThisYear,
         ];
     }

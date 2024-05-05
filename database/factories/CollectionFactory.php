@@ -3,13 +3,14 @@
 namespace Database\Factories;
 
 use App\Models\Book;
+use App\Models\Status;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Review>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Collection>
  */
-class ReviewFactory extends Factory
+class CollectionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -21,8 +22,7 @@ class ReviewFactory extends Factory
         return [
             'user_id' => User::all()->random()->id,
             'book_id' => Book::all()->random()->id,
-            'star' => fake()->numberBetween(1, 5),
-            'comment' => fake()->sentence,
+            'status_id' => Status::all()->random()->id,
         ];
     }
 }
