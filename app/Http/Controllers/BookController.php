@@ -10,7 +10,8 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::with('media')
-            ->orderByDesc('created_at')->paginate(10);
+            ->orderByDesc('created_at')
+            ->paginate(10);
 
         return view('public.books.index', ['books' => $books]);
     }
