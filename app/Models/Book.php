@@ -17,24 +17,16 @@ class Book extends Model implements HasMedia
     // Model relationships
     public function genre()
     {
-        return $this->belongsTo(Genre::class, 'genre_id');
+        return $this->belongsTo(Genre::class);
+    }
+
+    public function authors()
+    {
+        return $this->belongsTo(Author::class);
     }
 
     // ---------------------------------------------------
-    public function users()
-    {
-        return $this->belongsToMany(User::class, 'user_id');
-    }
-
-    public function status()
-    {
-        return $this->hasOne(Status::class, 'statuts_id');
-    }
-
-    public function reviews()
-    {
-        return $this->hasMany(Review::class, 'book_id');
-    }
+    
 
     // Business logic for model -----------------------------------
     public function isAllowedToEdit(User $user): bool
