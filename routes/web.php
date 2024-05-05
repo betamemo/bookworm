@@ -6,8 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Public routes
 Route::get('/', \App\Http\Controllers\WelcomeController::class);
 
-Route::resource('authors', \App\Http\Controllers\AuthorController::class)->only('index', 'show');
-Route::resource('categories', \App\Http\Controllers\CategoryController::class)->only('index', 'show');
+Route::resource('genres', \App\Http\Controllers\GenreController::class)->only('index', 'show');
 
 Route::get('/books', [\App\Http\Controllers\BookController::class, 'index'])->name('books.index');
 Route::get('/books/{id}', [\App\Http\Controllers\BookController::class, 'show'])->name('books.show');
@@ -25,8 +24,6 @@ Route::middleware(['auth'])->prefix('user')->name('user.')->group(function () {
     Route::resource('books', \App\Http\Controllers\User\BookController::class);
     Route::resource('status', \App\Http\Controllers\User\StatusController::class);
     Route::resource('reviews', \App\Http\Controllers\User\ReviewController::class);
-    Route::resource('categories', \App\Http\Controllers\User\CategoryController::class)
-        ->middleware(\App\Http\Middleware\IsAdminMiddleware::class);
 });
 
 Route::middleware('auth')->group(function () {
