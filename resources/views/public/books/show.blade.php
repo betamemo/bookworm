@@ -11,16 +11,8 @@
 
             <!-- Book cover -->
             <div class="mb-6 flex justify-center">
-                <img src="{{ $book->getFeaturedImageUrl() }}" class="rounded-r-lg shadow-xl">
+                <img src="{{ $book->getFeaturedImageUrl() }}" class="rounded-r-xl shadow-xl">
             </div>
-
-            @auth
-            <div class="flex justify-center mb-6">
-                <a href="{{ route('user.status.create') }}" class="p-2 border text-green-500 border-green-500 bg-green-500 text-white rounded-full hover:bg-green-600">
-                    Add to your books
-                </a>
-            </div>
-            @endauth
 
             <!-- Reviews -->
             <div class="">
@@ -61,7 +53,7 @@
         </div>
 
         <!-- Section 2 -->
-        <div class="bg-white p-5 w-2/3 rounded-lg">
+        <div class="bg-white p-5 w-2/3 rounded-xl">
 
             <h1 class="font-bold text-3xl">{{ $book->name }}</h1>
 
