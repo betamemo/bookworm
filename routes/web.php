@@ -6,14 +6,15 @@ use Illuminate\Support\Facades\Route;
 // Public routes
 Route::get('/', \App\Http\Controllers\WelcomeController::class);
 
-Route::resource('genres', \App\Http\Controllers\GenreController::class)->only('index', 'show');
-
 Route::get('/books', [\App\Http\Controllers\BookController::class, 'index'])->name('books.index');
 Route::get('/books/{id}', [\App\Http\Controllers\BookController::class, 'show'])->name('books.show');
 
+Route::resource('authors', \App\Http\Controllers\AuthorController::class)->only('index', 'show');
+
+Route::resource('genres', \App\Http\Controllers\GenreController::class)->only('index', 'show');
+
 Route::get('/search', [\App\Http\Controllers\SearchController::class, 'create'])->name('search.create');
 Route::post('/search', [\App\Http\Controllers\SearchController::class, 'store'])->name('search.store');
-
 
 // User routes
 require __DIR__ . '/auth.php';
