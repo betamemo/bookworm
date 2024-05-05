@@ -6,6 +6,9 @@ This web application is designed to assist you keep track of your books by funct
 ## Developer
 - Bandita K ([@betamemo](https://www.github.com/betamemo))
 
+## Model and Data Structure
+- [Figma](https://www.figma.com/file/kWCWTYyb0J34N38lSrkXcQ/Bookworm)
+
 ## Requirements
 - [Laravel 11](https://laravel.com/docs/11.x/releases)
 
