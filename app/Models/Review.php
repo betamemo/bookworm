@@ -9,6 +9,7 @@ class Review extends Model
 {
     use HasFactory;
 
+    // Model relationships
     public function book()
     {
         return $this->belongsTo(Book::class);
