@@ -4,7 +4,7 @@
 
     <div class="mb-4 mt-4">Your search for '{{ $search_term }}' resulted in {{ $books->count() }} results:</div>
 
-    <div class="grid grid-cols-4 gap-8">
+    <div class="grid grid-cols-6 gap-8">
         @foreach($books as $book)
         <x-book-display-card :book="$book" />
         @endforeach
