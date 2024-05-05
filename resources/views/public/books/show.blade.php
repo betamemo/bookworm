@@ -1,7 +1,7 @@
-<x-site-layout name="{{ $book->name }}" hideTitle>
+<x-site-layout title="{{ $book->name }}" hideTitle>
 
     <div class="flex justify-left w-full mb-4">
-        <a href="{{ route('books.index') }}" class="px-3 py-2 text-green-500 font-semibold rounded-full hover:bg-green-500 hover:text-white">&lt Back</a>
+        <a href="{{ route('books.index') }}" class="px-3 py-2 text-green-500 font-bold rounded-full hover:bg-green-500 hover:text-white">&lt Back</a>
     </div>
 
     <div class="flex flex-col md:flex-row gap-x-12">
@@ -33,7 +33,7 @@
 
                 <!-- Reviews -->
                 @foreach($reviews as $review)
-                <div class="bg-white rounded-xl p-4 mb-4">
+                <div class="bg-white rounded-xl p-4 mt-4">
 
                     {{ $review->comment }}
 
@@ -64,31 +64,29 @@
                     <img src="/img/star.png" />
                     <img src="/img/star.png" class="filter grayscale" />
                     <img src="/img/star.png" class="filter grayscale" />
-                    <span class="pl-4 font-semibold">3/5</span>
+                    <span class="pl-4 font-bold">3/5</span>
                 </div>
             </div>
 
             <div class="my-2">
                 <span class="text-green-500 font-bold">&gt</span>
-                Author: <span class="font-semibold">{{ $book->author }}</span>
+                Author: <span class="font-bold">{{ $book->author }}</span>
             </div>
 
             <div class="my-2">
                 <span class="text-green-500 font-bold">&gt</span>
-                ISBN: <span class="font-semibold">{{ $book->isbn }}</span>
+                ISBN: <span class="font-bold">{{ $book->isbn }}</span>
             </div>
 
             <div class="my-2">
                 <span class="text-green-500 font-bold">&gt</span>
-                Publisher: <span class="font-semibold">{{ $book->publisher }}</span>
+                Publisher: <span class="font-bold">{{ $book->publisher }}</span>
             </div>
 
             <div class="my-2">
                 <span class="text-green-500 font-bold">&gt</span>
-                Genres: <span class="text-red-500 font-semibold">{{ $book->genre_id }}</span>
+                Genres: <span class="font-bold">{{ $book->genre->name }}</span>
             </div>
-
-
 
             <br />
             <hr />
@@ -98,9 +96,5 @@
 
         </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-x-12">
-        <div class="w-1/3"></div>
 
-
-    </div>
 </x-site-layout>
