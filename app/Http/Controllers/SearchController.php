@@ -31,7 +31,8 @@ class SearchController extends Controller
         // Look for books with the search term
         $books_direct = Book::query()
             ->where('name', 'LIKE', '%' . $search_term . '%')
-            ->orWhere('content', 'LIKE', '%' . $search_term . '%')
+            ->orWhere('author', 'LIKE', '%' . $search_term . '%')
+            ->orWhere('isbn', 'LIKE', '%' . $search_term . '%')
             ->get();
 
         $books = $books_direct->union($books_from_keyword);

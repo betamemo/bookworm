@@ -1,8 +1,12 @@
-<x-site-layout title="Search results for '{{$search_term}}'">
+<x-site-layout title="Search books">
 
-<x-form-search />
+    <x-form-search />
 
-    <div class="mb-4 mt-4">Your search for '{{ $search_term }}' resulted in {{ $books->count() }} results:</div>
+    <div class="mb-4 mt-4">
+        Results for
+        <span class="font-bold">'{{ $search_term }}'</span>
+        in <span class="font-bold">{{ $books->count() }}</span> book(s):
+    </div>
 
     <div class="grid grid-cols-6 gap-8">
         @foreach($books as $book)
