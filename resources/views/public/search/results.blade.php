@@ -4,8 +4,7 @@
 
     <div class="mb-4 mt-4">
         Results for
-        <span class="font-bold">'{{ $search_term }}'</span>
-        in <span class="font-bold">{{ $books->count() }}</span> book(s):
+        <span class="font-bold">'{{ $search_term }}'</span> in <span class="font-bold">{{ $books->count() }}</span> book(s):
     </div>
 
     <div class="grid grid-cols-6 gap-8">

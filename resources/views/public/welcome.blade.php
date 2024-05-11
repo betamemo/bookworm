@@ -10,7 +10,7 @@
     <br />
     <hr />
     <br />
-    
+
     <h1 class="font-bold text-2xl">New Book Releases</h1>
     <br />
     <div class="grid grid-cols-6 gap-6">

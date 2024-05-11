@@ -1,14 +1,10 @@
 <x-site-layout title="Details of {{$category->name}}">
 
-    <p>
-        Category <strong>{{$category->name}}</strong> has the following articles connected:
-    </p>
+    <p>Category <strong>{{$category->name}}</strong> has the following articles connected:</p>
 
     <div class="grid grid-cols-2 gap-8">
         @foreach($category->articles as $article)
-
         <x-article-display-card :article="$article" />
-
         @endforeach
     </div>
 
